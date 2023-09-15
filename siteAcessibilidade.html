@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade Visual</title>
+    <style>
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Estilo padrão */
+        .default {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Estilo para daltônicos */
+        .daltonismo {
+            background-color: #6a6a6a;
+            color: #ffcc00;
+        }
+
+        /* Aumentar o tamanho da fonte */
+        .fonte-grande {
+            font-size: 20px;
+        }
+
+        /* Reduzir o tamanho da fonte */
+        .fonte-pequena {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="default">
+    <h1>Acessibilidade Visual</h1>
+    <p>Esta é uma página de exemplo com recursos de acessibilidade visual.</p>
+
+    <button onclick="toggleDaltonismo()">Ativar/Desativar Modo Daltônico</button>
+    <button onclick="increaseFont()">Aumentar Tamanho da Fonte</button>
+    <button onclick="decreaseFont()">Reduzir Tamanho da Fonte</button>
+
+    <script>
+        // Função para ativar/desativar o modo daltônico
+        function toggleDaltonismo() {
+            const body = document.body;
+            body.classList.toggle('daltonismo');
+        }
+
+        // Função para aumentar o tamanho da fonte
+        function increaseFont() {
+            const body = document.body;
+            body.classList.add('fonte-grande');
+        }
+
+        // Função para reduzir o tamanho da fonte
+        function decreaseFont() {
+            const body = document.body;
+            body.classList.remove('fonte-grande');
+            body.classList.add('fonte-pequena');
+        }
+    </script>
+</body>
+</html>
+
+
